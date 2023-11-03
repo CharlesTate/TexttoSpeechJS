@@ -6,11 +6,14 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-.hero 
+body
+{
+    background: linear-gradient(45deg, #010758, #490d61);
+}
+.hero
 {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(45deg, #010758, #490d61);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,11 +69,20 @@ button
     cursor: pointer;
     display: flex;
     align-items: center;
+    transition: 0.5s;
+}
+button:hover
+{
+    font-size: 20px;
 }
 button img
 {
     width: 16px;
     margin-right: 10px;
+}
+button img:hover
+{
+    width: 22px;
 }
 select
 {
@@ -88,4 +100,60 @@ select
     background-size: 15px;
     background-position-x: calc(100% - 20px);
     background-position-y: 20px;
+}
+#color-buttons 
+{
+    position: absolute;
+    bottom: 55px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px; /* Increase the gap between buttons */
+}
+
+.color-button 
+{
+    width: 40px; /* Increase the width and height of the buttons */
+    height: 55px;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff5733, #33ff57);
+    transition: transform 0.3s;
+}
+
+.color-button:hover 
+{
+    /* background: #888; */
+    transform: scale(1.1); /* Solid color on hover */
+}
+.footer 
+{
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: -3em;
+}
+
+.footer-left a,
+.footer-right a 
+{
+    color: #ff2963;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-right .download-button 
+{
+    background-color: #ff2963;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 35px;
+    text-decoration: none;
 }
