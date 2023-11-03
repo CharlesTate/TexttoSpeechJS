@@ -24,3 +24,22 @@ document.querySelector("button").addEventListener("click", () =>{    //select bu
     speech.text = document.querySelector("textarea").value;
     window.speechSynthesis.speak(speech);
 });
+
+// Color Button Scripts
+const colorGradients = [
+    'linear-gradient(135deg, #010758, #490d61)',
+    'linear-gradient(135deg, #ff5733, #33ff57)',
+    'linear-gradient(135deg, #33ff57, #5733ff)',
+    'linear-gradient(135deg, #5733ff, #ff33b0)',
+    'linear-gradient(135deg, #ff33b0, #33b0ff)',
+    'linear-gradient(135deg, #33b0ff, #ff5733)'
+];
+
+const colorButtons = document.querySelectorAll('.color-button');
+
+for (let i = 0; i < colorButtons.length; i++) {
+    colorButtons[i].style.background = colorGradients[i];
+    colorButtons[i].addEventListener('click', function () {
+        document.body.style.background = colorGradients[i];
+    });
+}
